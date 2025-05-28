@@ -26,7 +26,7 @@ export default function Home() {
         setResultado('Peso normal');
       } else if (imcValue >= 25 && imcValue < 29.9) {
         setResultado('Sobrepeso');
-      } else {
+      } else if( imcValue >= 30) {
         setResultado('Obesidade');
       }
     }
