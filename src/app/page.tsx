@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from 'react';
+import {FaCalculator} from 'react-icons/fa'
+import './home.css';
 
 type Pessoa = {
   peso: number;
@@ -43,10 +45,13 @@ export default function Home() {
   }
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <form action="post" className='flex flex-col rounded-sm p-4 bg-white' onSubmit={handleSubmit}>
-          <h1 className='mb-5 text-center text-lg font-bold text-black'>Calculadora IMC</h1>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-10 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-[10px] row-start-2 items-center sm:items-start">
+        <form action="post" className='flex flex-col rounded-lg p-4 bg-white w-90 h-85' onSubmit={handleSubmit}>
+          <div className='flex flex-row items-center justify-center mb-4'>
+          <h1 className='m-2 text-center text-lg font-bold text-black'>Calculadora IMC</h1>
+          <FaCalculator className='text-2xl text-orange-600 mb-2'/>
+          </div>
           <label htmlFor='peso' className='text-black'>Peso:</label>
           <input
            type="number"
@@ -66,14 +71,14 @@ export default function Home() {
            name='altura'          
            />
           <button type="button"
-           className='w-70 h-9 bg-dark m-4 bg-orange-600 rounded-sm hover:bg-orange-500 cursor-pointer'
+           className='w-70 h-9 bg-dark m-4 bg-orange-600 rounded-sm hover:bg-orange-500 cursor-pointer text-white font-bold'
             onClick={() => calcularIMC()}>
               Calcular
           </button>
         </form>
-        <div className='flex flex-col w-full h-25'>
-          {imc && <p className='text-center'>Seu IMC é: {imc.toFixed(2)}</p>}
-          {resultado && <p className='text-center'>Resultado: {resultado}</p>}
+        <div className='flex flex-col w-full h-25 div-results'>
+          {imc && <p className='text-center text-white'>Seu IMC é: {imc.toFixed(2)}</p>}
+          {resultado && <p className='text-center text-white'>Resultado: {resultado}</p>}
         </div>
           
       </main>
