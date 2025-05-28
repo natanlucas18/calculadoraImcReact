@@ -1,0 +1,34 @@
+@media(max-width: 420px){
+  body {
+    font-size: 14px;
+  }
+
+  form {
+    width: 80dvw;
+    height: 360px;
+  }
+
+
+  label {
+    font-size: 18px;
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 90%;
+    height: 40px;
+    font-size: 16px;
+    margin: 16px 12px 0 12px;
+  }
+
+  .div-results {
+    font-size: 18px;
+    margin-top: 6px;
+  }
+  
+}
