@@ -22,7 +22,7 @@ export default function Home() {
       setImc(imcValue);
       if (imcValue < 18.5) {
         setResultado('Abaixo do peso');
-      } else if (imcValue >= 18.5 && imcValue < 24.9) {
+      } else if (imcValue >= 18.5 && imcValue <= 24.99) {
         setResultado('Peso normal');
       } else if (imcValue >= 25 && imcValue < 29.9) {
         setResultado('Sobrepeso');
